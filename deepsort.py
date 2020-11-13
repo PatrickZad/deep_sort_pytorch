@@ -34,7 +34,7 @@ class VideoTracker(object):
             self.vdo = cv2.VideoCapture(args.cam)
         else:
             self.vdo = cv2.VideoCapture()
-        self.detector = build_detector(cfg, use_cuda=use_cuda
+        self.detector = build_detector(cfg, use_cuda=use_cuda)
         self.deepsort = build_tracker(cfg, use_cuda=use_cuda)
         self.class_names = self.detector.class_names
 
